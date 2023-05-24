@@ -18,8 +18,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         btnCall.layer.cornerRadius = 30
+        
     }
 
-
+    @IBAction func personalData(_ sender: Any) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "PersonalDataViewController") as! PersonDataViewController
+        self.present(mainVC, animated: true)
+    }
+    
 }
 
